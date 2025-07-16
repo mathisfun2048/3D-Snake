@@ -1,6 +1,6 @@
 # July 15
 
-## 1AM -> 6AM
+## 1AM -> 6AM (6 hours)
 
 Started framing the implementation of the music software. Did not have the internet, so this process took a bit longer than normal. 
 
@@ -10,12 +10,28 @@ This is going to be added to the runtime firmware and does the following:
 - adds music to make the game feel less boring
 - the above point also helps mask the sound of the motor
 
+This is code so I don't know what picutres to attach
+
 # July 16
 
-## 1AM -> 6AM
+## 1AM -> 8AM (7 hours)
 
-Thought a pcb would make this look more slick. Researched parts, and made the pcb design. I have screenshots attached below.
+Thought a pcb would make this look more slick. 
 
-<img width="500" height="527" alt="Screenshot 2025-07-16 at 6 23 03 AM" src="https://github.com/user-attachments/assets/0ed14aa1-4667-4477-988d-d4af1307b6c2" />
+During the processes, I found out that the code I wrote was pretty useless so I started from scratch. 
+
+I researched differnt audio modules, and settled on a MAX98357 which integrates a digital to analog decoder and an amp. yay! With this, ill be able to plug my speaker directly into this module. 
+
+For my speaker, I chose the lowest cost 8 ohm speaker haha
+
+
+<img width="500" height="573" alt="Screenshot 2025-07-16 at 4 08 24 PM" src="https://github.com/user-attachments/assets/8e604619-3b86-4e49-b289-991c301e1c87" />
+
+<img width="500" height="617" alt="Screenshot 2025-07-16 at 4 08 44 PM" src="https://github.com/user-attachments/assets/9b5f5f1f-e551-4443-a649-25884fae1b33" />
+
+
+<img width="500" height="420" alt="Screenshot 2025-07-16 at 4 09 05 PM" src="https://github.com/user-attachments/assets/aa128006-a42d-425d-9ec1-5804bb26757a" />
+
+
 
 
