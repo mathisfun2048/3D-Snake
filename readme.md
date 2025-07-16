@@ -21,6 +21,12 @@ During prototyping, one of the hardest parts of the design was making sure all t
 <img width="500" height="420" alt="Screenshot 2025-07-16 at 4 09 05 PM" src="https://github.com/user-attachments/assets/aa128006-a42d-425d-9ec1-5804bb26757a" />
 
 
+Here's the full wirings with the raspberry pi:
+<img width="500" height="565" alt="Screenshot 2025-07-16 at 4 35 08 PM" src="https://github.com/user-attachments/assets/20c4acb2-331b-4110-9940-eb0f55616083" />
+
+
+
+
 ## Firmware
 
 This project is coded in circuitpython to run on a raspberry pi pico. Most of the firmware was written at the hackathon, including the snake's game engine and wrapping mechanisms. With my improvements, a audio mechanism was added, playing a sound when the game is played and a death "game over" sound. Additionally, the joystick movements was revised, however, its effacaciy will only be able to be tested once I build it and get to callibrate the joystick.
