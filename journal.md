@@ -50,7 +50,7 @@ polished the PCB and did a quick cad case to hold the compute box together. Left
 
 <img width="2732" height="2048" alt="full case together" src="https://github.com/user-attachments/assets/3ce42acf-db87-4513-90be-bf2cd0cf599b" />
 
-## 5PM -> 6PM
+## 5PM -> 6PM (1 hour)
 
 Polished the code for audio.... hopefully it works!
 
