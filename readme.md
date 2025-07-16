@@ -33,7 +33,11 @@ This project is coded in circuitpython to run on a raspberry pi pico. Most of th
 
 ## CAD
 
-<tbd>
+Here it is! It's pretty bare-bones because I want access to all the gpio and other pins for debugging. 
+
+<img width="2732" height="2048" alt="full case together" src="https://github.com/user-attachments/assets/614c26f3-fb0c-445a-87ab-3c6acbf13f3e" />
+
+
 
 ## BOM
 
