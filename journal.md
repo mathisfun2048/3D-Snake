@@ -40,6 +40,11 @@ For my speaker, I chose the lowest cost 8 ohm speaker haha
 
 <img width="500" height="420" alt="Screenshot 2025-07-16 at 4 09 05 PM" src="https://github.com/user-attachments/assets/aa128006-a42d-425d-9ec1-5804bb26757a" />
 
+## 3PM -> PM (2 hours)
+
+polished the PCB and did a quick cad case to hold the compute box together. Left big openings so the wires can flow through. 
+
+<img width="2732" height="2048" alt="full case together" src="https://github.com/user-attachments/assets/3ce42acf-db87-4513-90be-bf2cd0cf599b" />
 
 
 
