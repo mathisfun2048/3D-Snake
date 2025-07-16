@@ -20,6 +20,10 @@ This is going to be added to the runtime firmware and does the following:
 
 This is code so I don't know what picutres to attach
 
+<img width="97" height="188" alt="Screenshot 2025-07-16 at 6 19 04 PM" src="https://github.com/user-attachments/assets/4387171b-5b15-4630-83a0-73dd3e84d87a" />
+
+
+
 # July 16
 
 ## 1AM -> 8AM (7 hours)
@@ -40,11 +44,19 @@ For my speaker, I chose the lowest cost 8 ohm speaker haha
 
 <img width="500" height="420" alt="Screenshot 2025-07-16 at 4 09 05 PM" src="https://github.com/user-attachments/assets/aa128006-a42d-425d-9ec1-5804bb26757a" />
 
-## 3PM -> PM (2 hours)
+## 3PM -> 5PM (2 hours)
 
 polished the PCB and did a quick cad case to hold the compute box together. Left big openings so the wires can flow through. 
 
 <img width="2732" height="2048" alt="full case together" src="https://github.com/user-attachments/assets/3ce42acf-db87-4513-90be-bf2cd0cf599b" />
+
+## 5PM -> 6PM
+
+Polished the code for audio.... hopefully it works!
+
+
+<img width="1156" height="539" alt="Screenshot 2025-07-16 at 6 18 46 PM" src="https://github.com/user-attachments/assets/8a4ec67b-c185-4b6d-ba9c-f22d4d509999" />
+
 
 
 
