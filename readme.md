@@ -38,6 +38,11 @@ Here it is! It's pretty bare-bones because I want access to all the gpio and oth
 <img width="2732" height="2048" alt="full case together" src="https://github.com/user-attachments/assets/614c26f3-fb0c-445a-87ab-3c6acbf13f3e" />
 
 
+Here's what the game will look like with the prototype cad we made at undercity! 
+
+![IMG_5337](https://github.com/user-attachments/assets/3fcd43cb-fff2-459a-b5db-3cb28e87e822)
+
+
 
 ## BOM
 
