@@ -11,6 +11,72 @@ import digitalio
 import digitalio
 import time
 
+# starting code for audio
+
+import audiobusio
+import audiocore
+import array
+import math
+
+audio = audiobusio.I2SOut(
+    bit_clock=board.GP9,
+    word_select=board.GP10,
+    data=board.GP11
+)
+
+def generate_tone(frequency, duration, sample_rate=22050):
+    samples = int(sample_rate * duration)
+    tone_array = array.array('H')
+    
+    for i in range(samples):
+        sample = int(32767 * math.sin(2 * math.pi * frequency * i / sample_rate))
+        tone_array.append(sample + 32768)
+    
+    return audiocore.RawSample(tone_array, sample_rate=sample_rate)
+
+def generate_background_music(duration=10, sample_rate=22050):
+    samples = int(sample_rate * duration)
+    music_array = array.array('H')
+    
+    for i in range(samples):
+        t = i / sample_rate
+        note1 = 0.3 * math.sin(2 * math.pi * 440 * t)
+        note2 = 0.2 * math.sin(2 * math.pi * 550 * t)
+        note3 = 0.1 * math.sin(2 * math.pi * 660 * t)
+        
+        combined = note1 + note2 + note3
+        sample = int(16383 * combined)
+        music_array.append(sample + 32768)
+    
+    return audiocore.RawSample(music_array, sample_rate=sample_rate)
+
+
+audio = audiobusio.I2SOut(
+    bit_clock=board.GP9,
+    word_select=board.GP10,
+    data=board.GP11
+
+
+death_sound = generate_tone(200, 0.5)
+background_music = generate_background_music()
+
+def play_death_sound():
+    if not audio.playing:
+        audio.play(death_sound)
+
+def start_background_music():
+    if not audio.playing:
+        audio.play(background_music, loop=True)
+
+def stop_audio():
+    audio.stop()
+
+start_background_music()
+)
+
+
+# ending code for audio
+
 # === Motor Control Setup ===
 # GPIO pin assignments for DRV8825
 DIR_PIN = board.GP2    # Direction control
@@ -399,7 +465,54 @@ def draw():
 
 
 
+def move(): # new move function with audio
+    global snake, apple, direction
 
+    read_joystick_analog()
+
+    head = snake[-1]
+    result = wrap_position(*head, *direction)
+    if result is None:
+        stop_audio()
+        play_death_sound()
+        while audio.playing:
+            pass
+        snake[:] = [(4, 4, 1)]
+        direction = (1, 0, 0)
+        apple = (random.randint(0, 7), random.randint(0, 7), random.randint(1, 5))
+        reset_cube_rotation()
+        start_background_music()
+        return
+
+    new_pos, new_dir = result
+    if new_pos is None or new_pos in snake:
+        stop_audio()
+        play_death_sound()
+        while audio.playing:
+            pass
+        snake[:] = [(4, 4, 1)]
+        direction = (1, 0, 0)
+        apple = (random.randint(0, 7), random.randint(0, 7), random.randint(1, 5))
+        reset_cube_rotation()
+        start_background_music()
+        return
+
+    if new_dir != direction:
+        direction = new_dir
+
+    snake.append(new_pos)
+    if new_pos == apple:
+        while True:
+            apple = (random.randint(0, 7), random.randint(0, 7), random.randint(1, 5))
+            if apple not in snake:
+                break
+    else:
+        snake.pop(0)
+
+    update_cube_rotation()
+
+
+""" #old move function
 def move():
     global snake, apple, direction
 
@@ -433,6 +546,8 @@ def move():
         snake.pop(0)
 
     update_cube_rotation()
+
+"""
 
 def show_score():
 	global current_score, high_score
