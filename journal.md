@@ -1,3 +1,11 @@
+---
+title: "Snake 3D"
+author: "Arya"
+description: "A 3-D port of snake in the third dimension"
+created_at: "2025-07-11"
+---
+
+
 # July 15
 
 ## 1AM -> 6AM (6 hours)
